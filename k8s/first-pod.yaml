@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: japp
+  labels:
+    app: japp
+    release: "0"
+spec:
+  containers:
+    - name: japp
+      image: japp
+      imagePullPolicy: IfNotPresent
+      resources:
+        requests:
+          memory: "64Mi"
+          cpu: "250m"
+        limits:
+          memory: "128Mi"
+          cpu: "500m"
