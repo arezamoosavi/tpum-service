@@ -8,8 +8,7 @@ metadata:
 spec:
   containers:
     - name: japp
-      image: japp
-      imagePullPolicy: IfNotPresent
+      image: arezamoosavi/jupyter-centos7:latest
       resources:
         requests:
           memory: "64Mi"

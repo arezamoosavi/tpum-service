@@ -1,0 +1,25 @@
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+
+docker build -t jp .
+docker run --rm --name jupython -p 8888:8888 jp
+
+docker ps -a
+docker commit 3a6e848907be arezamoosavi/jupyter-centos7
+docker push arezamoosavi/jupyter-centos7
+
+
+minikube start
+minikube status
+minikube stop
+minikube ip
+
+kubectl deleto po --all
+kubectl deleto svc --all
+
+kubectl get all
+kubectl apply -f .
+kubectl apply -f sth.yaml
+kubectl logs my-pod
+kubectl logs -f my-pod   #stream
+
+http://172.17.0.2:30080
