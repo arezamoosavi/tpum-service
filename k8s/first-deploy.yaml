@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: japp
+
+spec:
+  # minReadySeconds: 30
+  selector:
+    matchLabels:
+      app: japp
+      release: "0"
+  replicas: 2
+  template: # template for the pods
+    metadata:
+      labels:
+        app: japp
+        release: "0"
+    spec:
+      containers:
+        - name: japp
+          image: arezamoosavi/jupyter-centos7:latest
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"

@@ -13,8 +13,15 @@ minikube status
 minikube stop
 minikube ip
 
-kubectl deleto po --all
-kubectl deleto svc --all
+kubectl delete po --all
+kubectl delete rc --all
+kubectl delete svc --all
+kubectl rollout status feploy webapp
+kubectl rollout history feploy webapp
+kubectl rollout undo feploy webapp --to-revision=2
+kubectl describe pod podName
+
+
 
 kubectl get all
 kubectl apply -f .
